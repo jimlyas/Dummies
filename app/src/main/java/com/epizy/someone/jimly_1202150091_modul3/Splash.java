@@ -12,11 +12,15 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        //Menjalankan method setelah 1,5 detik
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+                //Memulai activity baru
                 startActivity(new Intent(Splash.this, login.class));
+                //Memberikan transisi antar activity
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                //Menutup activity saat ini
                 finish();
             }
         }, 1500);

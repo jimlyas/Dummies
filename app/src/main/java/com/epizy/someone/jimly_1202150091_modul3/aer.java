@@ -4,6 +4,7 @@ package com.epizy.someone.jimly_1202150091_modul3;
  * Created by ASUS on 23/02/2018.
  */
 
+//Class ini sebagai enkapsulasi
 public class aer {
     String nama; String detail; int baack;
 

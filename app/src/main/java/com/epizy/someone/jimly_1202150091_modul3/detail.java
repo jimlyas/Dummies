@@ -15,37 +15,51 @@ public class detail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+
+        //Menentukan toolbar pada activity saat ini
         Toolbar tool = findViewById(R.id.toolbarnya_detail);
         setSupportActionBar(tool);
 
+        //Mengatur gambar pada toolbar
         baack = findViewById(R.id.gambarnya_aer);
         baack.setImageDrawable(getResources().getDrawable(Integer.valueOf(getIntent().getStringExtra("background"))));
         baack.setScaleType(ImageView.ScaleType.FIT_XY);
 
+        //Menentukan tulisan pada textview nama
         nama = findViewById(R.id.detail_nama_aer);
         nama.setText(getIntent().getStringExtra("nama"));
 
+        //Menentukan tulisan pada textview detail
         detail = findViewById(R.id.detailnya_aer);
         detail.setText(getIntent().getStringExtra("detail"));
 
+        //Menentukan gambar pada imageview galonnya
         galonnya = findViewById(R.id.galonyangdiisi);
         galonnya.setImageLevel(0);
 
     }
 
+    //Method ketika tombol + ditekan
     public void tambahin(View view) {
+        //Memeriksa apakah botol telah penuh
         if(galonnya.getDrawable().getLevel()+1<=4){
+            //Menambahkan level gambar
             galonnya.setImageLevel(galonnya.getDrawable().getLevel()+1);
         }else{
+            //ketika botol telah penuh lakukan :
             galonnya.setImageLevel(4);
             Toast.makeText(this, "Galonnya udah penuh!", Toast.LENGTH_SHORT).show();
         }
     }
 
+    //Method ketika tombol - ditekan
     public void kurangin(View view) {
+        //Memeriksa apakah botol akan kosong
         if(galonnya.getDrawable().getLevel()-1>=0){
+            //Mengurangi level gambar
             galonnya.setImageLevel(galonnya.getDrawable().getLevel()-1);
         }else{
+            //Ketika botol telah kosong lakukan :
             galonnya.setImageLevel(0);
             Toast.makeText(this, "Galonnya mau kosong!", Toast.LENGTH_SHORT).show();
         }

@@ -16,8 +16,10 @@ public class listjenisaer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listjenisaer);
+        //kasih judul
         setTitle("List Air");
 
+        //Konfigurasi recyclerview
         rv = findViewById(R.id.list_aer);
         rv.setHasFixedSize(true);
         if(getResources().getConfiguration().orientation==Configuration.ORIENTATION_PORTRAIT){
@@ -25,10 +27,15 @@ public class listjenisaer extends AppCompatActivity {
         }else{
             rv.setLayoutManager(new GridLayoutManager(listjenisaer.this, 2));
         }
+
+        //inisialisasi list buat aer
         aernya = new ArrayList<>();
+
+        //Manggil method buat dapetin data aer
         initdata();
     }
 
+    //Memeriksa ketika orientasi layar berubah
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
@@ -39,6 +46,7 @@ public class listjenisaer extends AppCompatActivity {
         }
     }
 
+    //Method untuk memasukkan data
     public void initdata(){
         aernya.add(new aer("Ades", "Nama aernya ades", R.drawable.ades));
         aernya.add(new aer("Amidis", "Nama aernya amidis", R.drawable.amidis));
@@ -51,7 +59,10 @@ public class listjenisaer extends AppCompatActivity {
         aernya.add(new aer("Nestle", "Nama aernya Nestle", R.drawable.nestle));
         aernya.add(new aer("Pristine", "Nama aernya Pristine", R.drawable.pristine));
         aernya.add(new aer("Vit", "Nama aernya Vit", R.drawable.vit));
+
+        //Inisialisasi pada adapter
         adapter = new adapteraer(listjenisaer.this, aernya);
+        //Mengatur adapter untuk recyvlerview
         rv.setAdapter(adapter);
     }
 
