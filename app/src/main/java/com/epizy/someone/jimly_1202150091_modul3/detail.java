@@ -10,7 +10,8 @@ import android.widget.Toast;
 
 public class detail extends AppCompatActivity {
     ImageView baack, galonnya;
-    TextView nama, detail;
+    TextView nama, detail, liternya;
+    int literaer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +38,11 @@ public class detail extends AppCompatActivity {
         galonnya = findViewById(R.id.galonyangdiisi);
         galonnya.setImageLevel(0);
 
+        //Menentukan text pada liternya
+        liternya = findViewById(R.id.liternya);
+        literaer = 20;
+        liternya.setText(literaer+" Liter");
+
     }
 
     //Method ketika tombol + ditekan
@@ -45,6 +51,8 @@ public class detail extends AppCompatActivity {
         if(galonnya.getDrawable().getLevel()+1<=4){
             //Menambahkan level gambar
             galonnya.setImageLevel(galonnya.getDrawable().getLevel()+1);
+            literaer+=20;
+            liternya.setText(literaer+" Liter");
         }else{
             //ketika botol telah penuh lakukan :
             galonnya.setImageLevel(4);
@@ -58,6 +66,8 @@ public class detail extends AppCompatActivity {
         if(galonnya.getDrawable().getLevel()-1>=0){
             //Mengurangi level gambar
             galonnya.setImageLevel(galonnya.getDrawable().getLevel()-1);
+            literaer-=20;
+            liternya.setText(literaer+" Liter");
         }else{
             //Ketika botol telah kosong lakukan :
             galonnya.setImageLevel(0);

@@ -48,7 +48,7 @@ public class listjenisaer extends AppCompatActivity {
 
     //Method untuk memasukkan data
     public void initdata(){
-        aernya.add(new aer("Ades", "Nama aernya ades", R.drawable.ades));
+        aernya.add(new aer("Ades", "Air ini bernama Ades, dan ini merupakan air yang pertama kali saya tambahkan di activity ini.", R.drawable.ades));
         aernya.add(new aer("Amidis", "Nama aernya amidis", R.drawable.amidis));
         aernya.add(new aer("Aqua", "Nama aernya aqua", R.drawable.aqua));
         aernya.add(new aer("Cleo", "Nama aernya Cleo", R.drawable.cleo));
