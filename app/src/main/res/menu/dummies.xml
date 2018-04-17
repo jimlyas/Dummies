@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="FingerPrinting"
+        android:icon="@drawable/ic_finger"
+        android:id="@+id/menufinger"/>
+    <item android:title="Subscription"
+        android:icon="@drawable/ic_subscription"
+        android:id="@+id/menusub"/>
+</menu>

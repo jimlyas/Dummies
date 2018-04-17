@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#212121</color>
-    <color name="colorPrimaryDark">#424242</color>
+    <color name="colorPrimaryDark">#484848</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="placeholder_bg">#dddddd</color>
+    <color name="item_name">#0c0c0c</color>
+    <color name="description">#1a1a1a</color>
+    <color name="chef">#777</color>
+    <color name="timestamp">#777</color>
+
+    <color name="merah">#ef5350</color>
+    <color name="biru">#42a5f5</color>
+    <color name="hijau">#66bb6a</color>
 </resources>
