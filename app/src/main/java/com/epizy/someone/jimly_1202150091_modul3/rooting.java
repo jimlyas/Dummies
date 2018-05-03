@@ -24,4 +24,7 @@ public class rooting extends AppCompatActivity {
     public void bukabarcode(View view) {
         startActivity(new Intent(rooting.this, barcode.class));
     }
+
+    public void bukabottomnav(View view) { startActivity(new Intent(rooting.this, Bottom_Navigation.class));
+    }
 }
